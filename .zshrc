@@ -10,8 +10,9 @@ export ZSH="/Users/vindhya.raviraj/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# Commented out ZSH_THEME config because the spaceship theme is being loaded below via a zgen plugin
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="random"
+# ZSH_THEME="random"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -114,14 +115,3 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# VR - copying .bash_profile
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# VR - creating alias for "serve" - browser-sync local dev server
-export LOCAL_IP=`ipconfig getifaddr en0`
-alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000"
-# changed to port 80 to try to match port of easylogin iframe src
-alias https-serve="sudo browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 80 --https"
