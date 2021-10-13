@@ -78,7 +78,8 @@ echo "Creating a zgen save"
 	zgen oh-my-zsh plugins/git
 	zgen load zsh-users/zsh-syntax-highlighting
 	zgen load lukechilds/zsh-nvm
-	zgen load spaceship-prompt/spaceship-prompt spaceship
+	# install spaceship prompt separately because the zgen plugin loads the prompt down like crazy
+	# zgen load spaceship-prompt/spaceship-prompt spaceship
 
 	# generate the init script from plugins above
 	zgen save
